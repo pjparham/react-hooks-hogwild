@@ -6,18 +6,28 @@ import Filter from "./Filter";
 import hogs from "../porkers_data";
 
 function App() {
-console.log(hogs.sort((a,b) => a.weight-b.weight))
 	const [showHogs, setShowHogs] = useState(hogs)
+	const [checked, setChecked] = useState(false)
+	const [sortName, setSortName] = useState(true)
 	
 	const hogsToDisplay = showHogs
 		.sort((hog1, hog2) => {
-			return hog1.name.localeCompare(hog2.name)
+			if(sortName === true){
+				return hog1.name.localeCompare(hog2.name)
+			}
+			else { return hog1.weight-hog2.weight}
+		})
+		.filter((hog) => {
+			if (checked === true){
+				return hog.greased === true
+			}
+			else{ return true }
 		})
 
 	return (
 		<div className="App">
 			<Nav />
-			<Filter />
+			<Filter sortName={sortName} setSortName={setSortName} checked={checked} setChecked={setChecked}/>
 			<hr/>
 			<HogContainer hogs={hogsToDisplay}/>
 		</div>

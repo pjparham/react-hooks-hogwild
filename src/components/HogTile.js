@@ -14,7 +14,9 @@ function HogTile({ hogs, name, image, greased, weight, specialty, medal }){
             greased={greased} 
             weight={weight} 
             specialty={specialty}
-            medal={medal}/> :  <HogPreview name={name} image={image}/> }
+            medal={medal}
+            name={name}
+            image={image}/> :  <HogPreview name={name} image={image}/> }
         </div>
     )
 }

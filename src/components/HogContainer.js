@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import HogTile from "./HogTile";
 
 function HogContainer({ hogs }){
-    // const [showHogs, setShowHogs] = useState(hogs)
-    console.log(hogs)
     const hogTiles = hogs.map((hog) => {
         return(
             <HogTile 
