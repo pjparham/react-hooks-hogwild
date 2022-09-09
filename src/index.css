@@ -91,6 +91,10 @@ ul {
   opacity: 1;
 }
 
+.pigTile img{
+  width: 250px;
+}
+
 .minBackgroundSneak {
   position: absolute;
   width: inherit;
@@ -138,6 +142,27 @@ ul {
 .footer {
   padding: 1%;
   clear: both;
+}
+
+#filter{
+  white-space: nowrap;
+  margin: 5px;
+}
+
+#filter-space{
+  margin-left: 10px;
+}
+
+#filter button{
+  margin-left: 3px;
+}
+
+#filter input{
+  margin-right: 1px;
+}
+
+.in-filter{
+  display: inline-block;
 }
 
 
